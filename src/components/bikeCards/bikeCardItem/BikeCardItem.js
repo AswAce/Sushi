@@ -17,8 +17,11 @@ const BikeCardItem = ({ bike }) => {
                 {bike.title}
             </div>
             <div className={styles.desc}>
-                {bike.description}
+                {bike.description}, 70gr
+                {/* {bike.} */}
             </div>
+            <div className={styles.price}>Цена:{bike.price.toFixed(2)}лв</div>
+
             <div className={styles.slider}>
                 <figure data-color="#E24938, #A30F22">
                     <img
@@ -28,18 +31,17 @@ const BikeCardItem = ({ bike }) => {
                     />
                 </figure>
             </div>
-
+           
             <div className={styles.cta}>
-                <div className={styles.price}>{bike.price.toFixed(2)}$</div>
-                {auth.accessToken &&
+                {
                     <button
                         className={styles.addCartBtn}
                         onClick={() => onAdd(bike)}
                     >
-                        Add to
+                       Добавяне
                         <FontAwesomeIcon icon={faCartPlus} className={styles.cartIcon} />
                     </button>}
-                <Link to={`/details/${bike._id}`} className={styles.btn}>View<span></span></Link>
+                <Link to={`/details/${bike._id}`} className={styles.btn}>Детайли<span></span></Link>
             </div>
         </div>
     );

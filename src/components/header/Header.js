@@ -28,7 +28,7 @@ const Header = () => {
             <nav className="navbar navbar-expand-md navbar-dark bg-dark ">
                 <div className="container">
                     <Link to='/' className="navbar-brand">
-                        MTB-Shop
+                        Sushi
                     </Link>
                     <button
                         className="navbar-toggler"
@@ -48,31 +48,42 @@ const Header = () => {
                         <ul className="navbar-nav ">
                             <li className="nav-item">
                                 <Link to='/' className="nav-link">
-                                    Home
+                                    Начало страница
                                     <span className="sr-only">(current)</span>
                                 </Link>
                             </li>
                             <li className="nav-item">
                                 <Link to='/catalog' className="nav-link">
-                                    Catalog
+                                    Меню
                                     <span className="sr-only">(current)</span>
                                 </Link>
                             </li>
                             <li className="nav-item">
                                 <Link to='/about' className="nav-link">
-                                    About
+                                    За нас
                                     <span className="sr-only">(current)</span>
                                 </Link>
                             </li>
                             <li className="nav-item">
                                 <Link to='/contact-us' className="nav-link" >
-                                    Contact
+                                    Контакти
                                     <span className="sr-only">(current)</span>
                                 </Link>
                             </li>
+                            <li className={styles.shoppingCardIcon}>
+                                    <FontAwesomeIcon
+                                        onClick={() => handleShow()} icon={faShoppingCart}
+                                        className={`${cartItems.length ? styles.shoppingCart : styles.shoppingCartEmpty}`}
+                                    />
+                                    <span
+                                        className={`${cartItems.length ? styles.numberNotifRedCart : styles.numberNotifCart}`}>
+                                        {cartItems.length === 0 ? '' : cartItems.length}
+                                    </span>
+                                </li>
+                                <ShoppingCart show={showShoppingCart} handleClose={handleClose} />
                         </ul>
                     </div>
-                    <ul className="navbar-nav ">
+                    {/* <ul className="navbar-nav ">
                         {console.log(auth)}
                         {!auth.accessToken
                             ? <Link to='/login' className="nav-link">
@@ -105,7 +116,7 @@ const Header = () => {
                                 </li>
                             </>
                         }
-                    </ul>
+                    </ul> */}
                 </div>
             </nav>
         </header >

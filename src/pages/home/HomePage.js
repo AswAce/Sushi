@@ -7,9 +7,9 @@ const HomePage = () => {
                 <section>
                     <div className="wellcome">
                         <div className="wellcomeMsg">
-                            <div className="headTag">All Mountain Bike Spot</div>
+                            <div className="headTag">Sushi</div>
                             <div className="subTag">
-                                All Mountain Bike Spot
+                                Sushi
                             </div>
                         </div>
                     </div>

@@ -40,8 +40,8 @@ const DetailsPage = () => {
             .then(data => setBike(data))
             .finally(() => setIsLoading(false));
 
-        getBikeReviews(bikeId)
-            .then(data => setReviews(data));
+        // getBikeReviews(bikeId)
+        //     .then(data => setReviews(data));
     }, []);
 
     const handleReviewChange = (e) => {
@@ -52,30 +52,30 @@ const DetailsPage = () => {
         });
     }
 
-    const submitReviewHandler = (e) => {
-        e.preventDefault();
+    // const submitReviewHandler = (e) => {
+    //     e.preventDefault();
 
-        if (newReview.description == "") {
-            return setReviewValidation({ description: "Cannot submit empty review. Please enter a valid review." });
-        }
+    //     if (newReview.description == "") {
+    //         return setReviewValidation({ description: "Cannot submit empty review. Please enter a valid review." });
+    //     }
 
-        createReview(newReview)
-            .then((response) => {
-                if (response.status == 200) {
-                    getBikeReviews(bikeId)
-                        .then(data => {
-                            setReviews(data);
-                        });
-                    alert("You have successfully added new review.");
-                }
-            })
+    //     createReview(newReview)
+    //         .then((response) => {
+    //             if (response.status == 200) {
+    //                 getBikeReviews(bikeId)
+    //                     .then(data => {
+    //                         setReviews(data);
+    //                     });
+    //                 alert("You have successfully added new review.");
+    //             }
+    //         })
 
-        setNewReview({
-            _bikeId: bikeId,
-            description: "",
-            rating: 0
-        });
-    }
+    //     setNewReview({
+    //         _bikeId: bikeId,
+    //         description: "",
+    //         rating: 0
+    //     });
+    // }
 
     if (isLoading) {
         return <LoadingContent />
@@ -93,11 +93,6 @@ const DetailsPage = () => {
 
                 <div className={styles.bikeContainer}>
                     <div className={styles.bikeBoxLeft}>
-                        <div className={styles.bikeVideoBox}>
-                            <ReactPlayer
-                                url={bike.video}
-                            />
-                        </div>
 
                         <div className={styles.bikeDescriptionBox}>
                             <div className={styles.bikeDetails}>
@@ -115,14 +110,14 @@ const DetailsPage = () => {
                                     </div>
                                 </div>
                             </div>
-                            <button
+                            {/* <button
                                 className={styles.reviewBtn}
                                 onClick={() => handleShowReviews()}
                             >
                                 View User reviews
                                 <FontAwesomeIcon icon={faComments} className={styles.reviewsIcon} />
-                            </button>
-                            <ReviewsModal show={showReviews} reviews={reviews} handleClose={handleCloseReviews} />
+                            </button> */}
+                            {/* <ReviewsModal show={showReviews} reviews={reviews} handleClose={handleCloseReviews} /> */}
                             <br />
                             <div className={styles.bikeDescription}>
                                 <h4>
@@ -152,7 +147,7 @@ const DetailsPage = () => {
                         </div>
                     </aside>
                 </div>
-                {auth.accessToken &&
+                {/* {auth.accessToken &&
                     <div>
                         <form onSubmit={submitReviewHandler} className={styles.reviewWrapper}>
                             <label htmlFor="comment" className={styles.reviewTitle}>Rate & Review</label>
@@ -170,7 +165,7 @@ const DetailsPage = () => {
                             </button>
                         </form>
                     </div>
-                }
+                } */}
             </div>
         </>
     );

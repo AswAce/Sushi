@@ -9,6 +9,11 @@ import Title from "../../components/title/Title";
 
 
 const CatalogPage = () => {
+    const [productType, setProductType] = useState('');
+
+    const handleButtonClick = (type) => {
+      setProductType(type);
+    };
     const pageSize = 6;
 
     const [bikes, setBikes] = useState([]);
@@ -49,8 +54,32 @@ const CatalogPage = () => {
                 <div className={styles.catalog}>
                     <div>
                         {bikes && (
+                            
                             <div className={styles.catalogContainerRowTitle}>
-                                <Title txt="all products" color="#171717" size={40} transform="uppercase" />
+                                     <button
+        className={`${styles.buttonSushiTypes} ${productType === 'Всички продукти' ? styles.active : ''}`}
+        onClick={() => handleButtonClick('Всички продукти')}
+      >
+        Всички продукти
+      </button>
+      <button
+        className={`${styles.buttonSushiTypes} ${productType === 'Суши' ? styles.active : ''}`}
+        onClick={() => handleButtonClick('Суши')}
+      >
+        Суши
+      </button>
+      <button
+        className={`${styles.buttonSushiTypes} ${productType === 'Сетове' ? styles.active : ''}`}
+        onClick={() => handleButtonClick('Сетове')}
+      >
+        Сетове
+      </button>
+      <button
+        className={`${styles.buttonSushiTypes} ${productType === 'Напитки' ? styles.active : ''}`}
+        onClick={() => handleButtonClick('Напитки')}
+      >
+        Напитки
+      </button>
                             </div>
                         )}
                     </div>
