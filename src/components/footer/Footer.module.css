@@ -1,0 +1,9 @@
+.footerWrapper {
+    max-width: 1130px;
+    margin: auto;
+}
+
+.footerCopyright {
+    text-align: center;
+    padding: 15px 0px;
+}

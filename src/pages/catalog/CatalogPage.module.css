@@ -1,0 +1,35 @@
+.catalog {
+  max-width: 1150px;
+  margin: 0 auto;
+}
+.catalogCards {
+  display: flex;
+  flex-wrap: wrap;
+}
+.catalogContainerRow {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-gap: 2rem;
+    margin-bottom: 50px;
+}
+.catalogContainerRowTitle {
+  padding: 0.5rem;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 40px;
+}
+.catalogSearchInput {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 20px;
+    padding-left: 35px;
+    margin-bottom: 30px;
+}
+
+.catalogSearchInput:hover {
+    border: 1px solid #313339;
+}
+

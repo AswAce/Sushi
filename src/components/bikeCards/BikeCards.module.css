@@ -1,0 +1,20 @@
+.widgetContainer {
+    margin: 134px auto;
+}
+
+.bikesWidget {
+    text-align: center;
+}
+
+.bikesWidgetTitle {
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    color: rgb(2, 2, 2);
+    font-size: 33px;
+    font-weight: bold;
+}
+
+.bikesWidgetCards {
+    display: flex;
+    justify-content: space-between;
+}

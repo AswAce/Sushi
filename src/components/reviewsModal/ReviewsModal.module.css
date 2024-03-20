@@ -1,0 +1,17 @@
+.reviewCard {
+border-radius: 5px;
+border: 1px solid #15171e;
+background-color: rgb(227, 247, 253);
+margin-top: 10px;
+}
+
+.review {
+text-align: center;
+margin-left: 10px;
+}
+
+.reviewHeader {
+display: flex;
+justify-content: center;
+margin-right: 10px;
+}

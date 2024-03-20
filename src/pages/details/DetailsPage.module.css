@@ -1,0 +1,166 @@
+.bikeTitle {
+font-size: 30px;
+color: rgb(14, 101, 122);
+text-transform: uppercase;
+margin-bottom: 5px;
+}
+.detailHeader {
+display: flex;
+justify-content: space-between;
+align-items: center;
+border-bottom: 1px solid #ddd;
+margin-bottom: 35px;
+padding-bottom: 10px;
+padding-top: 30px;
+}
+
+.detailTitle {
+font-size: 20px;
+color: rgb(10, 10, 10);
+text-transform: uppercase;
+}
+
+.featuresItem {
+color: rgb(0, 0, 0);
+margin-right: 10px;
+}
+.bikeFeatures {
+font-size: 18px;
+color: rgb(2, 2, 2);
+margin-bottom: 5px;
+}
+.bikeDetailsItem {
+border-left: 1px solid rgb(15, 15, 15);
+padding-left: 20px;
+}
+
+.bikeDetails {
+margin: 25px 0px;
+}
+
+.bikeDescriptionBox {
+color: rgb(8, 8, 8);
+line-height: 23px;
+font-size: 15px;
+width: 860px;
+max-height: 400px;
+overflow: hidden;
+margin-left: 330px;
+}
+.bikeContainer {
+display: flex;
+justify-content: space-between;
+margin-bottom: 50px;
+}
+.bikeBoxLeft {
+width: 860px;
+}
+.bikeVideoBox {
+width: 100%;
+height: 350px;
+margin-bottom: 15px;
+margin-left: 330px;
+margin-top: 30px;
+}
+.bikeBoxRight .bikePrice {
+margin: 10px 0px;
+color: rgb(15, 79, 109);
+font-size: 30px;
+align-content: center;
+}
+.bikeBoxRight {
+position: sticky;
+top: 100px;
+height: 357px;
+margin-right: 400px;
+}
+.addCartBtn {
+position: relative;
+z-index: 1;
+float: right;
+display: inline-block;
+font-size: 13px;
+font-weight: 900;
+text-transform: uppercase;
+color: #13488d;
+padding: 12px 18px;
+cursor: pointer;
+transition: all .3s ease-in-out;
+line-height: .95;
+border: none;
+background: none;
+outline: none;
+border: 1px solid #13488d;
+border-radius: 20px;
+overflow: hidden;
+margin-bottom: 5px;
+margin-left: 5px;
+margin-right: 20px;
+margin-top: 5px;
+}
+
+.addCartBtn:hover{
+color:rgb(208, 195, 211);
+background-color: rgb(7, 31, 165);
+}
+.backToCatalog {
+padding-left: 0px;
+}
+.reviewBtn {
+margin-right: 50px;
+margin-bottom: 15px;
+
+position: relative;
+z-index: 1;
+float: right;
+display: inline-block;
+font-size: 13px;
+font-weight: 900;
+text-transform: uppercase;
+color: #4e45c4;
+padding: 12px 18px;
+cursor: pointer;
+transition: all .3s ease-in-out;
+line-height: .95;
+border: none;
+background: none;
+outline: none;
+border: 1px solid #7c68e9;
+border-radius: 20px;
+overflow: hidden;
+margin-left: 5px;
+margin-top: 5px;
+}
+.reviewBtn:hover {
+color: rgb(208, 195, 211);
+background-color: #536cda;
+}
+.reviewsIcon {
+margin-left: 5px;
+}
+.cartIcon {
+margin-left: 5px;
+}
+.inputReview {
+color: #15171e;
+font-size: 20px;
+font-weight: bold;
+}
+.reviewTitle {
+font-size: 25px;
+color: rgb(2, 2, 2);
+}
+.reviewWrapper {
+text-align: center;
+margin-bottom: 50px;
+}
+.submitReview {
+margin-top: 20px;
+width: 150px;
+height: 50px;
+padding: 5px 50px;
+background: #15171e;
+color: white;
+font-variant-caps: all-small-caps;
+font-size: 20px;
+}

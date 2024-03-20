@@ -1,0 +1,22 @@
+.ratingFaces{
+margin: 15px 0px;
+font-size: 25px;
+}
+.ratingFace {
+padding: 0;
+border: none;
+background: none;
+}
+.smileFace {
+color: #ecbe00;
+
+}
+.smileFaceOff {
+color: #000000;
+}
+.angryFace {
+color: #f80707;
+}
+.angryFaceOff {
+color: #030303;
+}

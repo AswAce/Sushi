@@ -1,0 +1,10 @@
+.add {
+  background-color: #40c0f0;
+  border-radius: 0.5rem;
+  width: 1.5rem;
+}
+.remove {
+  background-color: #eb4646;
+  border-radius: 0.5rem;
+  width: 1.5rem;
+}

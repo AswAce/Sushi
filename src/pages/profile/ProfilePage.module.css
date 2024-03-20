@@ -1,0 +1,79 @@
+
+.pageWrapper {
+display: flex;
+justify-content: space-around;
+margin-bottom: 70px;
+margin-top: 300px;
+}
+.accountBox {
+width: 350px;
+min-height: 300px;
+max-height: 400px;
+border-radius: 10px;
+overflow: hidden;
+padding: 55px 55px 37px 55px;
+background: rgb(215, 228, 240);
+margin-top: -200px;
+}
+.reviewsBox {
+width: 500px;
+margin-top: -200px;
+}
+.cardActionIcon {
+    font-size: 18px;
+    background: transparent;
+    border: none;
+    margin-bottom: 5px;
+    margin-right: 3px;
+}
+.cardActionIcon:hover {
+    color: rgb(65, 149, 218);
+}
+
+.userAvatar {
+width: 90px;
+height: 90px;
+}
+
+.boxHeader {
+color: #15171e;
+font-size: 20px;
+border-bottom: 1px solid #15171e;
+text-align: center;
+padding-bottom: 10px;
+}
+
+.accountBoxContent {
+margin-top: 40px;
+text-align: center;
+}
+
+.accountBoxHeadings {
+margin-top: 10px;
+font-size: 17px;
+font-weight: bold;
+}
+
+.reviewCard {
+border-radius: 5px;
+border: 1px solid #15171e;
+background-color: rgb(255, 255, 255);
+margin-top: 10px;
+}
+
+.review {
+text-align: left;
+margin-left: 10px;
+}
+
+.reviewHeader {
+display: flex;
+justify-content: space-between;
+margin-right: 10px;
+}
+.emptyReviews {
+font-size: 20px;
+margin-top: 20px;
+text-align: center;
+font-weight: bold;
+}
