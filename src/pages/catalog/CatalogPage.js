@@ -21,7 +21,7 @@ const CatalogPage = () => {
     const [resultsCount, setResultsCount] = useState(0);
     const [searchParams] = useSearchParams();
 
-    const { filterBikes, countBikeResults } = useBikesApi();
+    const { filterBikes, countBikeResults, getBikesByType } = useBikesApi();
     const navigate = useNavigate();
 
     const [query, setQuery] = useState({
@@ -36,13 +36,19 @@ const CatalogPage = () => {
             search: `?${createSearchParams(query)}`
         });
 
+        
+        getBikesByType(productType)
+            .then(data => setBikes(data))
+            .finally(() => setIsLoading(false));
+    
+
         filterBikes(query.query, query.offset, query.pageSize)
             .then(data => setBikes(data))
             .finally(() => setIsLoading(false));
 
         countBikeResults(query.query)
             .then(result => setResultsCount(result));
-    }, [query])
+    }, [query, productType])
 
     if (isLoading) {
         return <LoadingContent />

@@ -1,27 +1,33 @@
-const ContactsPage = () => {
+import styles from "./ContactsPage.module.css";
+import GoogleMapReact from 'google-map-react';
+
+const AnyReactComponent = ({ text }) => <div>{text}</div>;
+
+export default function ContactsPage(){
+  const defaultProps = {
+    center: {
+      lat:  42.710629,
+      lng: 23.290906
+    },
+    zoom: 11 
+  }; 
     return (
-        <div className="main-wrapper">
-            <section id="contact">
-                <div className="container">
-                    <div className="sectionHead">Contact Us</div>
-                    <hr />
-                    <br />
-                    <div className="row">
-                        <div className="col-md-3">
-                            <h4 className="sectionSubSubHead">Mail Us</h4>
-                            <ul className="list-unstyled">
-                                <li>Strandzha 140</li>
-                                <li>Sofia, Bulgaria</li>
-                                <li>Pin: 1330</li>
-                                <li>Phone: +359878030203</li>
-                                <li>Email: kyciterziev@gmail.com</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
+        // Important! Always set the container height explicitly
+        <div style={{width: 400, height: 400}}>
+          <GoogleMapReact
+            bootstrapURLKeys={{ key: "AIzaSyCWVRuM63WaxKZWTispQh6zql_mIozL2aw" }}
+            defaultCenter={defaultProps.center}
+            defaultZoom={defaultProps.zoom}
+            
+            
+          >
+            <AnyReactComponent
+              lat={42.710629}
+              lng={23.290906}
+              text="Sushi"
+            />
+          </GoogleMapReact>
         </div>
-    );
+      );
 }
 
-export default ContactsPage;

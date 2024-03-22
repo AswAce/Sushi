@@ -6,6 +6,14 @@ const useBikesApi = () => {
             .then(response => response.json())
     }
 
+    const getBikesByType = (productType) => {
+        const queryParams = new URLSearchParams({ productType }); // Construct query parameters
+        const url = `${baseUrl}?${queryParams}`; // Append query parameters to the base URL
+        console.log(productType)
+        return fetch(url)
+            .then(response => response.json());
+    }
+
     const filterBikes = (title, offset, pageSize) => {
 
         let where = `where=title%20LIKE%20${JSON.stringify(title)}`;
@@ -22,7 +30,7 @@ const useBikesApi = () => {
             .then(response => response.json())
     }
 
-    return { getBike, filterBikes, countBikeResults };
+    return { getBike, getBikesByType, filterBikes, countBikeResults };
 }
 
 export default useBikesApi;

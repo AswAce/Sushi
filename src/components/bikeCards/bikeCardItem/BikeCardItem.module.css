@@ -7,6 +7,11 @@
     padding: 20px;
     text-align: center;
     z-index: 2;
+    display: flex;
+    /* Add display flex */
+    flex-direction: column;
+    /* Arrange children vertically */
+    justify-content: space-between;
 }
 
 .shopCard .cardImage {
@@ -31,11 +36,14 @@
 
 .cta {
     padding: 20px 20px 5px;
+    display: flex;
+    /* Add display flex */
+    justify-content: space-between;
 }
 
 .price {
     color: #FF3100;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 900;
     padding-top: 2px;
     transition: color .3s ease-in-out;
@@ -51,11 +59,11 @@
     z-index: 1;
     float: right;
     display: inline-block;
-    font-size: 13px;
+    font-size: 10px;
     font-weight: 900;
     text-transform: uppercase;
     color: #FF3100;
-    padding: 12px 18px;
+    padding: 8px 9px;
     cursor: pointer;
     transition: all .3s ease-in-out;
     line-height: .95;
@@ -66,8 +74,8 @@
     border-radius: 20px;
     overflow: hidden;
     margin-bottom: 5px;
-    margin-left: 5px;
-    margin-right: 20px;
+    margin-left: 1px;
+    margin-right: 10px;
 }
 
 .btn:hover {
@@ -80,11 +88,11 @@
     z-index: 1;
     float: right;
     display: inline-block;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 900;
     text-transform: uppercase;
     color: #13488d;
-    padding: 12px 18px;
+    padding: 9px 8px;
     cursor: pointer;
     transition: all .3s ease-in-out;
     line-height: .95;
@@ -95,8 +103,8 @@
     border-radius: 20px;
     overflow: hidden;
     margin-bottom: 5px;
-    margin-left: 5px;
-    margin-right: 20px;
+    margin-left: 1px;
+    margin-right: 10px;
 }
 
 .addCartBtn:hover {
