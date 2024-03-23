@@ -55,71 +55,45 @@ const CatalogPage = () => {
     }
 
     return (
-        <div className="main">
+        
+        <div className={styles.main}>
             <div className="main-wrapper">
                 <div className={styles.catalog}>
                     <div>
                         {bikes && (
-                            
-                            <div className={styles.catalogContainerRowTitle}>
-                                     <button
-        className={`${styles.buttonSushiTypes} ${productType === 'Всички продукти' ? styles.active : ''}`}
-        onClick={() => handleButtonClick('Всички продукти')}
-      >
-        Всички продукти
-      </button>
-      <button
-        className={`${styles.buttonSushiTypes} ${productType === 'Суши' ? styles.active : ''}`}
-        onClick={() => handleButtonClick('Суши')}
-      >
-        Суши
-      </button>
-      <button
-        className={`${styles.buttonSushiTypes} ${productType === 'Сетове' ? styles.active : ''}`}
-        onClick={() => handleButtonClick('Сетове')}
-      >
-        Сетове
-      </button>
-      <button
-        className={`${styles.buttonSushiTypes} ${productType === 'Напитки' ? styles.active : ''}`}
-        onClick={() => handleButtonClick('Напитки')}
-      >
-        Напитки
-      </button>
-                            </div>
-                        )}
-                    </div>
-                    <input
-                        className={styles.catalogSearchInput}
-                        type="search"
-                        name="search"
-                        placeholder="Search shop"
-                        value={query.query}
-                        onChange={e => setQuery((state) => {
-                            return {
-                                ...state,
-                                query: e.target.value,
-                                offset: 0
-                            }
-                        })}
-                    />
-
-
-
-                    <div className={styles.catalogContainerRow}>
-                        {bikes ? (
-                            bikes.map((product, key) => <BikeCardItem bike={product} key={key} />)
-                        ) : (
-                            <div style={{ width: "100%", display: "flex", justifyContent: "center" }}>
-                                <p>
-                                    No results found.
-                                </p>
-                            </div>
-                        )}
-                    </div>
-                    <div>
-                        <Pagination numberOfResults={resultsCount} pageSize={pageSize} handleQuery={setQuery} offset={query.offset} />
-                    </div>
+               
+            <div className={`${styles.catalogContainerRowTitle} ${styles.buttonContainer}`}>
+            <button
+            className={`${styles.buttonSushiTypes} ${productType === 'Всички продукти' ? styles.active : ''}`}
+            onClick={() => handleButtonClick('Всички продукти')}>Всички продукти
+            </button>
+            <button
+            className={`${styles.buttonSushiTypes} ${productType === 'Суши' ? styles.active : ''}`}
+            onClick={() => handleButtonClick('Суши')}>Суши
+            </button>
+            <button
+            className={`${styles.buttonSushiTypes} ${productType === 'Сетове' ? styles.active : ''}`}
+            onClick={() => handleButtonClick('Сетове')}>Сетове
+            </button>
+            <button
+            className={`${styles.buttonSushiTypes} ${productType === 'Напитки' ? styles.active : ''}`}
+            onClick={() => handleButtonClick('Напитки')}>Напитки
+            </button>
+        </div>)}
+        </div>
+        <div className={styles.catalogContainerRow}>
+                {bikes ? (
+                    bikes.map((product, key) => <BikeCardItem bike={product} key={key} />)
+                    ) : (
+                     <div style={{ width: "100%", display: "flex", justifyContent: "center" }}>
+                            <p>
+                                No results found.
+                            </p>
+                    </div>)}
+        </div>
+        <div>
+            <Pagination numberOfResults={resultsCount} pageSize={pageSize} handleQuery={setQuery} offset={query.offset} />
+        </div>
                 </div>
             </div>
         </div >

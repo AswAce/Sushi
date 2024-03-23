@@ -1,58 +1,116 @@
-.catalog {
-    max-width: 1150px;
-    margin: 0 auto;
-}
-
-.catalogCards {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.catalogContainerRow {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 2rem;
-    margin-bottom: 50px;
-}
-
-.catalogContainerRowTitle {
-    padding: 0.5rem;
-    text-align: center;
-    font-weight: bold;
-    margin-top: 40px;
-}
-
-.catalogSearchInput {
-    width: 100%;
-    height: 40px;
-    border: 1px solid #ddd;
-    font-size: 16px;
-    font-weight: 400;
-    border-radius: 20px;
-    padding-left: 35px;
-    margin-bottom: 30px;
-}
-
-.catalogSearchInput:hover {
-    border: 1px solid #313339;
-}
-
-.buttonSushiTypes {
-    background-color: #df6127;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    width: 10rem;
-    z-index: 3;
-    margin: 0 10px;
-}
-
-.buttonSushiTypes:hover {
-    background-color: #444;
-}
-
-.buttonSushiTypes.active {
-    background-color: #3b2467;
-}
+    .catalog {
+        max-width: 1150px;
+        margin: 0 auto;
+    }
+    
+    .catalogCards {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .catalogContainerRow {
+        display: grid;
+        grid-template-columns: repeat(4, 0.1fr);
+        grid-gap: 2rem;
+        margin-bottom: 50px;
+    }
+    
+    @media (max-width: 768px) {
+        .catalogContainerRow {
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 15px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .catalogContainerRow {
+            grid-template-columns: repeat(2, 1fr);
+            /* 1 item in a row for very small screens */
+            grid-gap: 4px;
+            /* Even smaller gap for very small screens */
+        }
+    }
+    
+    .catalogContainerRowTitle {
+        padding: 0.5rem;
+        text-align: center;
+        font-weight: bold;
+        margin-top: 40px;
+    }
+    
+    .catalogSearchInput {
+        width: 100%;
+        height: 40px;
+        border: 1px solid #ddd;
+        font-size: 16px;
+        font-weight: 400;
+        border-radius: 20px;
+        padding-left: 35px;
+        margin-bottom: 30px;
+    }
+    
+    .catalogSearchInput:hover {
+        border: 1px solid #313339;
+    }
+    
+    .buttonSushiTypes {
+        background-color: #d8d174;
+        color: #f2f4f3;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        width: 10rem;
+        z-index: 3;
+        margin: 0 10px;
+    }
+    
+    .buttonSushiTypes:hover {
+        background-color: #b6c454;
+    }
+    
+    .buttonSushiTypes.active {
+        background-color: #d8d174;
+    }
+    
+    .main {
+        background-image: url('../../../public/images/menu.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    
+    .catalogContainerRowTitle,
+    .catalogSearchInput {
+        background-color: #e6d3a3;
+        /* White with some transparency */
+        box-shadow: 0 2px 4px rgba(108, 175, 237, 0.2);
+        /* Optional: adds a shadow for better legibility */
+        opacity: 0.9
+    }
+    
+    .catalogContainerRowTitle,
+    .catalogSearchInput,
+    .buttonSushiTypes {
+        color: #ffffff;
+        /* Change text color to white */
+        flex: 0 0 auto;
+        /* Don't grow, don't shrink, basis is auto */
+        margin-right: 5px;
+        margin-bottom: 10px;
+    }
+    
+    .buttonContainer {
+        display: flex;
+        overflow-x: auto;
+        white-space: nowrap;
+        -ms-overflow-style: none;
+        /* Internet Explorer 10+ */
+        scrollbar-width: none;
+        /* Firefox */
+    }
+    
+    .buttonContainer::-webkit-scrollbar {
+        display: none;
+        /* Safari and Chrome */
+    }

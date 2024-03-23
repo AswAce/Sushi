@@ -5,14 +5,15 @@
 }
 
 .paginationButton {
-    background-color: #ffffff;
-    color: rgb(0, 0, 0);
+    color: #e6d3a3;
     border: none;
     cursor: pointer;
+    margin: 0 10px;
+    /* Adjust the value '10px' to increase or decrease the spacing */
 }
 
 .bold {
     font-weight: bold;
     font-size: 20px;
-    color: rgb(0, 0, 0);
+    color: #e6d3a3
 }

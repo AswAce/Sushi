@@ -14,13 +14,13 @@ const HomePage = () => {
                         </div>
                     </div>
                 </section>
-                <div className="main-wrapper">
+                {/* <div className="main-wrapper">
                     <div className="wrapper">
                         <section id="shop">
                             <BikeList />
                         </section>
                     </div>
-                </div>
+                </div> */}
                 <section className="parallex-section">
                     <div className="parallex" id="parallex-set-3" />
                 </section>
