@@ -1,5 +1,5 @@
 const useBikesApi = () => {
-    const baseUrl = "http://localhost:3030/data/bikes";
+    const baseUrl = "http://localhost:8181/items";
 
     const getBike = (bikeId) => {
         return fetch(`${baseUrl}/${bikeId}`)
@@ -7,30 +7,25 @@ const useBikesApi = () => {
     }
 
     const getBikesByType = (productType) => {
-        const queryParams = new URLSearchParams({ productType }); // Construct query parameters
-        const url = `${baseUrl}?${queryParams}`; // Append query parameters to the base URL
+        const queryParams = new URLSearchParams({ productType }).toString(); // Correctly construct query parameters
+        const url = `${baseUrl}?${queryParams}`; // Append query parameters to the base URL/ Append query parameters to the base URL
         console.log(productType)
         return fetch(url)
             .then(response => response.json());
     }
 
-    const filterBikes = (title, offset, pageSize) => {
 
-        let where = `where=title%20LIKE%20${JSON.stringify(title)}`;
+    // const countBikeResults = (title) => {
 
-        return fetch(`${baseUrl}?${where}&offset=${offset}&pageSize=${pageSize}`)
-            .then(response => response.json())
-    }
+    //     let where = `where=title%20LIKE%20${JSON.stringify(title)}`;
 
-    const countBikeResults = (title) => {
+    //     return fetch(`${baseUrl}?${where}&count`)
+    //         .then(response => response.json())
+    // }
 
-        let where = `where=title%20LIKE%20${JSON.stringify(title)}`;
+    // return { getBike, getBikesByType, countBikeResults };
+    return { getBike, getBikesByType };
 
-        return fetch(`${baseUrl}?${where}&count`)
-            .then(response => response.json())
-    }
-
-    return { getBike, getBikesByType, filterBikes, countBikeResults };
 }
 
 export default useBikesApi;

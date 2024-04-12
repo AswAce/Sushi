@@ -12,13 +12,13 @@ const BikeCardItem = ({ bike }) => {
         <div className={styles.bikeCard}>
             <Link to={`/details/${bike._id}`} className={styles.imageLink}>
                 <img
-                    src={`/images/${bike.image}`}
+                    src={`${bike.imageURL}`}
                     alt={bike.title}
                     className={styles.bikeImage}
                 />
             </Link>
             <div className={styles.bikeInfo}>
-                <div className={styles.bikeName}>{bike.title} - {bike.quantity}</div>
+                <div className={styles.bikeName}>{bike.name} - {bike.pieces}</div>
                 <div className={styles.bikeSubInfo}>
                     {bike.price} | {bike.weight}
                 </div>

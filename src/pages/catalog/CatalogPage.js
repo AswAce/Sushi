@@ -9,7 +9,7 @@ import Title from "../../components/title/Title";
 
 
 const CatalogPage = () => {
-    const [productType, setProductType] = useState('');
+    const [productType, setProductType] = useState('SASHIMI');
 
     const handleButtonClick = (type) => {
       setProductType(type);
@@ -41,13 +41,8 @@ const CatalogPage = () => {
             .then(data => setBikes(data))
             .finally(() => setIsLoading(false));
     
-
-        filterBikes(query.query, query.offset, query.pageSize)
-            .then(data => setBikes(data))
-            .finally(() => setIsLoading(false));
-
-        countBikeResults(query.query)
-            .then(result => setResultsCount(result));
+    //     countBikeResults(query.query)
+    //         .then(result => setResultsCount(result));
     }, [query, productType])
 
     if (isLoading) {
@@ -68,12 +63,12 @@ const CatalogPage = () => {
             onClick={() => handleButtonClick('Всички продукти')}>Всички продукти
             </button>
             <button
-            className={`${styles.buttonSushiTypes} ${productType === 'Суши' ? styles.active : ''}`}
-            onClick={() => handleButtonClick('Суши')}>Суши
+            className={`${styles.buttonSushiTypes} ${productType === 'SASHIMI' ? styles.active : ''}`}
+            onClick={() => handleButtonClick('SASHIMI')}>Сашими
             </button>
             <button
-            className={`${styles.buttonSushiTypes} ${productType === 'Сетове' ? styles.active : ''}`}
-            onClick={() => handleButtonClick('Сетове')}>Сетове
+            className={`${styles.buttonSushiTypes} ${productType === 'NIGIRIZUSHI' ? styles.active : ''}`}
+            onClick={() => handleButtonClick('NIGIRIZUSHI')}>Нигири
             </button>
             <button
             className={`${styles.buttonSushiTypes} ${productType === 'Напитки' ? styles.active : ''}`}
@@ -92,7 +87,7 @@ const CatalogPage = () => {
                     </div>)}
         </div>
         <div>
-            <Pagination numberOfResults={resultsCount} pageSize={pageSize} handleQuery={setQuery} offset={query.offset} />
+            {/* <Pagination numberOfResults={resultsCount} pageSize={pageSize} handleQuery={setQuery} offset={query.offset} /> */}
         </div>
                 </div>
             </div>
