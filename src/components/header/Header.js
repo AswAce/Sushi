@@ -59,6 +59,18 @@ const Header = () => {
                                 </Link>
                             </li>
                             <li className="nav-item">
+                                <Link to='/create-item' className="nav-link">
+                                    добави предмет
+                                    <span className="sr-only">(current)</span>
+                                </Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link to='/add-daily-supplier' className="nav-link">
+                                    дневна бройка
+                                    <span className="sr-only">(current)</span>
+                                </Link>
+                            </li>
+                            <li className="nav-item">
                                 <Link to='/about' className="nav-link">
                                     За нас
                                     <span className="sr-only">(current)</span>

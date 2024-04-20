@@ -11,6 +11,8 @@ import RegisterPage from "./pages/register/RegisterPage";
 import ProfilePage from "./pages/profile/ProfilePage";
 import ProtectedRoute from "./components/protectedRoute/ProtectedRoute";
 import DetailsPage from "./pages/details/DetailsPage";
+import CreateItem from "./components/forms/createItemForm/CreateItem";
+import AddDailySupplier from "./components/forms/addDailySupplierForm/AddDailySupplier";
 
 import './App.css';
 
@@ -27,6 +29,8 @@ function App() {
                             <Route path="/catalog" element={<CatalogPage />} />
                             <Route path="/details/:bikeId" element={<DetailsPage />} />
                             <Route path="/login" element={<LoginPage />} />
+                            <Route path="/create-item" element={<CreateItem/>} />
+                            <Route path="/add-daily-supplier" element={<AddDailySupplier/>} />
                             <Route path="/register" element={<RegisterPage />} />
                             <Route path="/profile" element={<ProtectedRoute>
                                 <ProfilePage />
